@@ -1,0 +1,77 @@
+ion-header-bar {
+  background-color: #158ffe !important;
+  box-shadow: 0px 2px 13px -1px grey !important;
+}
+
+.bar.bar-stable .title {
+  color: white !important;
+}
+
+.homeComponent {
+  .messages {
+    .message {
+      display: flex;
+      justify-content: initial;
+      align-items: center;
+      margin: 10px 0px;
+      width: 100%;
+
+      .image-profile {
+        border-radius: 50%;
+        margin: 0px 5px;
+        width: 40px;
+        height: 40px;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .detail {
+        background-color: #158ffe;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        max-width: 80%;
+
+        .text {
+          font-weight: 300;
+        }
+        .profile {
+          .name {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      margin-top: 85px;
+      margin-bottom: -85px;
+    }
+  }
+
+  .left {
+    float: left;
+    flex-direction: row;
+  }
+
+  .right {
+    float: right;
+    flex-direction: row-reverse;
+  }
+
+  .chat {
+    width: 100%;
+    border-width: 0px;
+
+    input {
+      width: 100%;
+    }
+
+    i.send{
+      color: #367ad2;
+      margin-right: -11px;
+      font-size: 25px;
+    }
+  }
+
+}

@@ -1,0 +1,21 @@
+ion-view.page-component(view-title='Home' class="homeComponent")
+  ion-content
+    div.messages
+      div.message(ng-repeat="message in messages",
+                  ng-class="{right: user.email == message.email, left: user.email != message.email}")
+        div(style="background-image: url('{{message.photo}}')", ng-click="messages.$remove(message);" alt="", class="image-profile")
+        div.detail
+          p.text {{message.text}}
+          div.profile
+            span.name {{message.name}}
+
+  .bar.bar-footer
+    .item.item-input-inset.chat
+      label.item-input-wrapper
+        input(type='text',
+              required,
+              placeholder='Write something...'
+              ng-model="textMsg")
+      button.button.button-clear.pull-right(ng-click="addMessage(textMsg)"
+                                            ng-disabled="!textMsg")
+        i.ion-android-send.send
